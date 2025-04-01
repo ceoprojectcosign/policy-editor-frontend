@@ -1,0 +1,36 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "types": [
+            "vitest/globals",
+            "vite/client"
+        ],
+        "jsx": "react-jsx", // Ensure JSX works in tests
+        "module": "ESNext", // Match Vite's output
+        "moduleResolution": "Node",
+        "target": "ESNext", // Modern JS output
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true
+    },
+    "include": [
+        "tests",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/**/*.spec.ts",
+        "src/**/*.spec.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build",
+        "archive",
+        "venv"
+    ]
+}

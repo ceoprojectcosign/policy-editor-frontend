@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vitest/config'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
@@ -7,7 +7,11 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './tests/setupTests.js',
-    exclude: ['node_modules', 'tests/e2e/**'], // ✅ Don't run E2E or package tests
+    tsconfig: './tsconfig.vitest.json',
+    exclude: [
+      'node_modules',
+      'tests/e2e/**'
+    ],
     coverage: {
       provider: 'v8',
       enabled: true,
@@ -24,8 +28,8 @@ export default defineConfig({
         '**/*.d.ts',
         '**/__tests__/**',
         '**/*.{test,spec}.?(c|m)[jt]s?(x)',
-        'tests/setupTests.js',
-      ],
-    },
-  },
-});
+        'tests/setupTests.js'
+      ]
+    }
+  }
+})
