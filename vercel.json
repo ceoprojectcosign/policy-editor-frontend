@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/doc/:id", "destination": "/" },
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "buildCommand": "npm run build && npm run test",
+  "outputDirectory": "dist",
+  "ignoreCommand": "false"
+}
